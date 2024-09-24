@@ -5,7 +5,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-            Primer_Proy primerProy = new Primer_Proy();
-            primerProy.ejecutar();
+           Ejercicio4 prueba = new Ejercicio4();
+           prueba.ejecutar();
     }
 }
