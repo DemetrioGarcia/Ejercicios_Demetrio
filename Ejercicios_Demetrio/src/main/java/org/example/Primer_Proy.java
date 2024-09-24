@@ -12,17 +12,26 @@ public class Primer_Proy {
         System.out.println("¿A qué curso vas?: ");
         String curso = entradaEscaner.next();
 
-        System.out.println("Hola "+nombre+", bienvenid@ a "+curso);
+        System.out.println("Hola " + nombre + ", bienvenid@ a " + curso);
 
-        System.out.println("Introduce un numero: ");
-        int num1 = entradaEscaner.nextInt();
+        int num1 = 0;
+        int num2 = 0;
+        while (num1 == 0 || num2 == 0) {
 
-        System.out.println("Introduce un numero: ");
-        int num2 = entradaEscaner.nextInt();
+            System.out.println("Introduce un numero: ");
+           num1 = entradaEscaner.nextInt();
 
-        int total;
-        total = num1+num2 ;
+            System.out.println("Introduce un numero: ");
+            num2 = entradaEscaner.nextInt();
 
-        System.out.println("La suma de los dos números es: "+total);
+            if (num1 == 0 || num2 == 0) {
+                System.out.println("No sumes con 0");
+            }
+        }
+            int total;
+            total = num1 + num2;
+
+            System.out.println("La suma de los dos números es: " + total);
+
     }
 }
