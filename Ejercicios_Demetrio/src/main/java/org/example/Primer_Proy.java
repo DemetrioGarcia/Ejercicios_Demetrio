@@ -1,4 +1,5 @@
 package org.example;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Primer_Proy {
@@ -18,12 +19,17 @@ public class Primer_Proy {
         int num2 = 0;
         while (num1 == 0 || num2 == 0) {
 
-            System.out.println("Introduce un numero: ");
-           num1 = entradaEscaner.nextInt();
+            try {
+                System.out.println("Introduce un numero: ");
+                num1 = entradaEscaner.nextInt();
 
-            System.out.println("Introduce un numero: ");
-            num2 = entradaEscaner.nextInt();
-
+                System.out.println("Introduce un numero: ");
+                num2 = entradaEscaner.nextInt();
+            }
+            catch (NumberFormatException | InputMismatchException ex) {
+                System.out.println("Introduce un número válido.");
+                entradaEscaner.next();
+            }
             if (num1 == 0 || num2 == 0) {
                 System.out.println("No sumes con 0");
             }

@@ -5,10 +5,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-           Operadores prueba = new Operadores();
-           //prueba.operadores();
-           //prueba.asignacion();
-           //prueba.comparacion();
-           //prueba.logico();
+           Ejercicio6 prueba = new Ejercicio6();
+           prueba.Compra();
     }
 }
