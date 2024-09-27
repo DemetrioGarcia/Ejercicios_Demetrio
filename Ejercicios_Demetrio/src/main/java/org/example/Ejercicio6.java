@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejercicio6 {
@@ -9,12 +10,15 @@ public class Ejercicio6 {
 
         System.out.println("Tenemos tomate?");
         String tomate = entradaEscaner.next();
+        tomate = tomate.toLowerCase();
 
         System.out.println("Tenemos aceite?");
         String aceite = entradaEscaner.next();
+        aceite = aceite.toLowerCase();
 
         System.out.println("Tenemos jamon?");
         String jamon = entradaEscaner.next();
+        jamon = jamon.toLowerCase();
 
         if (jamon.equals("no") || aceite.equals("no")|| tomate.equals("no")){
            System.out.println("Tienes que ir a comprar");
