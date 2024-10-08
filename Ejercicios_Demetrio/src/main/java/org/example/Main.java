@@ -5,7 +5,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-           Practica4 prueba = new Practica4();
-           prueba.Multiplicacion();
+           Ejercicio4T2 prueba = new Ejercicio4T2();
+           prueba.Ejercicio4();
     }
 }
