@@ -15,7 +15,7 @@ public class Practica3T2 {
         String ISBN = Entrada.next();
         int tamanyo = ISBN.length();
 
-        if (tamanyo==10 || ISBN. ) {
+        if (tamanyo==10 && (ISBN.indexOf("?") == ISBN.lastIndexOf("?")) && (ISBN.indexOf("x") == 9 || !ISBN.contains("x"))) {
             for (int i = 0; i < 10; i++) {
 
                 String caracter = String.valueOf(ISBN.charAt(i));
@@ -42,14 +42,16 @@ public class Practica3T2 {
                 }
             } else {
                 if (totalf % 11 == 0) {
-                    System.out.println(totalf);
+                    //System.out.println(totalf);
                     System.out.println("ISBN correcto");
                 } else {
-                    System.out.println(totalf);
+                    //System.out.println(totalf);
                     System.out.println("ISBN incorrecto");
                 }
-
             }
+        }
+        else {
+            System.out.println("ISBN no válido (Comprueba que tenga 10 digitos o solo le falte un digito '?' ");
         }
     }
 }
