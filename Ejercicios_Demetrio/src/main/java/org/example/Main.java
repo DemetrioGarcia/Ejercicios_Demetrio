@@ -5,7 +5,8 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-           Ej4Random prueba = new Ej4Random();
-           prueba.Ejercicio4();
+           Ej6T2Preexamen prueba = new Ej6T2Preexamen();
+           prueba.Ejercicio1();
+
     }
 }
