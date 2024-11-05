@@ -5,8 +5,8 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-           ArraysEj2 prueba = new ArraysEj2();
-           prueba.Ejercicio2();
+           ArraysEj8 prueba = new ArraysEj8();
+           prueba.Ejercicio8();
 
     }
 }
