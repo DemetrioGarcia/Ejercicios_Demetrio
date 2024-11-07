@@ -11,8 +11,7 @@ public class ArraysEj8 {
         Scanner entrada = new Scanner(System.in);
 
         int[] num = new int[5];
-        int[] num2= new int[6];
-
+        int[] num2 = new int[6];
 
         System.out.print("Array normal: ");
         for (int i = 0 ; i < num.length ; i++){
@@ -22,21 +21,28 @@ public class ArraysEj8 {
 
         System.out.println();
         System.out.println("En que indice quieres añadir un número? ");
-
         int indice = entrada.nextInt();
 
         System.out.println("Que número quieres introducir? ");
         int numintr = entrada.nextInt();
 
-        for (int i=0 ; i < num.length+1; i++){
+        if (indice>=6){
+            indice=5;
+        }
+
+        for (int i=0 ; i < num2.length; i++){
+
             if (i==indice){
-                num[i]=numintr;
-            } else if (indice<=num.length) {
-                num2[i]=num[i];
-            } else {
-            num2[i]= numintr;
+                num2[i]=numintr;
+            }else if(i>indice){
+                    num2[i]= num[i-1];
+                }
+            else {
+                    num2[i]= num[i];
             }
         }
+
         System.out.println(Arrays.toString(num2));
+
     }
 }
