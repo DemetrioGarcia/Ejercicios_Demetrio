@@ -18,7 +18,6 @@ public class ArraysEj9 {
         System.out.println("Introduce la tercera palabra");
         array[2] = entrada.nextLine();
 
-
         for (int i=0; i < 3 ; i++){
 
             int aux = array[i].length();

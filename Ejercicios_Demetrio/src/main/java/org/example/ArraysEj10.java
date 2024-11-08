@@ -25,7 +25,7 @@ public class ArraysEj10 {
 
         System.out.println("Palabras que empìezan por "+inicial+": ");
         for (String i: array){
-            if (inicial ==i.charAt(0)){
+            if (inicial==i.charAt(0)){
                 System.out.println(i);
             }
         }
