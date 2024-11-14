@@ -5,8 +5,8 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-           Samurais prueba = new Samurais();
-           prueba.Samurais();
+        EliminarRepetidos prueba = new EliminarRepetidos();
+        prueba.Ejercicio3();
 
     }
 }
