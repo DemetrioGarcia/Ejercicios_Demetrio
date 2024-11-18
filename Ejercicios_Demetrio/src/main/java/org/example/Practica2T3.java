@@ -11,6 +11,9 @@ public class Practica2T3 {
         Random random = new Random();
 
         int aciertos=0;
+        int aciertoreintegro=0;
+        int aciertocomp=0;
+        int reintusuario=11;
 
         String boleto;
         boolean aux=true;
@@ -25,7 +28,14 @@ public class Practica2T3 {
         int[] intnumeros = new int[numeros.length];
 
         for (int i = 0 ; i<numeros.length ; i++){
-            intnumeros[i] = Integer.parseInt(numeros[i]);
+            if (i==6){
+                intnumeros[i]=Integer.parseInt(numeros[i]);
+                reintusuario=intnumeros[i];
+            }
+            else{
+                intnumeros[i] = Integer.parseInt(numeros[i]);
+
+            }
         }
         Arrays.sort(intnumeros);
 
@@ -61,69 +71,46 @@ public class Practica2T3 {
         System.out.println("");
         System.out.println("RESULTADO: ");
 
-        if (intnumeros[0]==sorteo[0]){
-            aciertos++;
-        }
-        if (intnumeros[1]==sorteo[1]){
-            aciertos++;
-        }
-        if (intnumeros[2]==sorteo[2]){
-            aciertos++;
-        }
-        if (intnumeros[3]==sorteo[3]){
-            aciertos++;
-        }
-        if (intnumeros[4]==sorteo[4]){
-            aciertos++;
-        }
-        if (intnumeros[5]==sorteo[5]){
-            aciertos++;
-        }
-        if (aciertos==0 || aciertos==6){
-            if (intnumeros[6]==reintegro){
-                aciertos+=10;
+        for(int i=0 ; i < intnumeros.length ;i++){
+            if (Arrays.asList(sorteo).contains(intnumeros[i])){
+                aciertos++;
             }
+        }
+
+        if (reintusuario == reintegro){
+            aciertoreintegro++;
         }
         if (aciertos==5) {
             for (int i = 0; i < intnumeros.length - 1; i++) {
                 if (intnumeros[i] == complementario) {
-                    aciertos+=4;
+                    aciertocomp++;
                 }
             }
         }
-        switch (aciertos) {
-            case 16 :
-                System.out.println("7 aciertos");
-                System.out.println("Categoria Especial!!!");
-                break;
-            case 6 :
-                System.out.println("6 aciertos");
-                System.out.println("1ª Categoria");
-                break;
-            case 9 :
-                System.out.println("5 aciertos y complementario");
-                System.out.println("2ª Categoria");
-                break;
-            case 5 :
-                System.out.println("5 aciertos");
-                System.out.println("3ª Categoria");
-                break;
-            case 4:
-                System.out.println("4 aciertos");
-                System.out.println("4ª Categoria");
-                break;
-            case 3:
-                System.out.println("3 aciertos");
-                System.out.println("5ª Categoria");
-                break;
-            case 10:
-                System.out.println("Has acertado solo el reintegro");
-                System.out.println("Reintegro");
-                break;
-            default:
-                System.out.println("0 aciertos");
+        if (aciertos==6 && aciertoreintegro==1) {
+            System.out.println("6 aciertos y el reintegro!!!");
+            System.out.println("Categoria Especial!!!");
+        } else if (aciertos==6) {
+            System.out.println("6 aciertos");
+            System.out.println("1ª Categoria");
+        } else if (aciertos==5 && aciertocomp==1) {
+            System.out.println("5 aciertos y complementario");
+            System.out.println("2ª Categoria");
+        } else if (aciertos==5) {
+            System.out.println("5 aciertos");
+            System.out.println("3ª Categoria");
+        } else if (aciertos==4) {
+            System.out.println("4 aciertos");
+            System.out.println("4ª Categoria");
+        } else if (aciertos==3) {
+            System.out.println("3 aciertos");
+            System.out.println("5ª Categoria");
+        } else if (aciertoreintegro==1) {
+            System.out.println("Has acertado solo el reintegro");
+            System.out.println("Reintegro");
+        } else {
+                System.out.println(aciertos+" aciertos");
                 System.out.println("Sin premio");
-                break;
         }
 
     }
