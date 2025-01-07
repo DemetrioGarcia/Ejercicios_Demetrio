@@ -12,18 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProgramaMe_HBTest {
 
     @Test
-    void main() {
-    }
-
-    @Test
-    void casoDePrueba() {
-    }
-
-    @Test
-    void cadenaDatos() {
-    }
-
-    @Test
     void cantFelic() {
         int[] Array = new int[]{1, 2, 3, 4, 5, 0};
         assertAll(
